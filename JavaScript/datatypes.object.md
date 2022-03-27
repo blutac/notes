@@ -2,19 +2,27 @@
 - passed by reference
 ## Construction
 ---
+### Object Literals
 ```js
-// Object Literals
 {};
 {keyA: value, keyB: value};
-let o = {keyA: value, "multi word key": value,};
-
-
-function Thing(value) {
-    // this = {}; (implicitly)
-    this.field = value;
-    // return this; (implicitly)
+{keyA: value, "multi word key": value,};
+let o = {};
+```
+### Object Constructors
+```js
+function construct(keyA, keyB) {
+    return {keyA: keyA, keyB: keyB};
+    return {keyA, keyB}; // shorthand syntax for above (can mix in)
 }
-let thing = new Thing("X"); // note: any function can be run with 'new' //?
+```
+```js
+function Thing(value) {
+    // this = {}; (implicitly defined)
+    this.field = value;
+    // return this; (implicitly defined)
+}
+let thing = new Thing("X"); // note: any function can be run with 'new'
 
 let thing = new function() {
     this.field = "X";
@@ -34,15 +42,12 @@ new.target //?
 
 new Object(); // parentheses are optional for no arguments
 
-function construct(keyA, keyB) {
-    return {keyA: keyA, keyB: keyB};
-    return {keyA, keyB}; // short hand (can mix in)
-}
 ```
 ---
 <br>
 
 ## `this`
+---
 ```js
 // `this` is dynamically bounded at runtime
 let x = { field: "X" };
@@ -66,16 +71,18 @@ obj.f() // retains the correct `this`
 
 obj.f   // returns a value of the reference type
 obj.f() // then receives the full information about the object and its method, setting the correct `this`
-(obj.f)() // works the same
+(obj.f)() // equivalent to above
 
 let g = obj.f; // other operations discard the reference type, and returns the value of f()
 g(); // `this` loses reference to 'obj'
 ```
+---
+<br>
 
 ## Properties
 ---
 - A key value pair
-- Can be any string except for `"__proto__"`
+- Key can be any string except for `"__proto__"`
 ### Accessing
 ```js
 // Setting & Getting

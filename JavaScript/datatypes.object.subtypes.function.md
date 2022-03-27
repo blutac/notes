@@ -110,7 +110,12 @@ f(1, 2); // calling
 - The function's `[[Environment]]` is set to the global Lexical Environment
 ### new function
 ```js
-let obj = new function() {this.field = 0;}
+let obj = new function() {this.field = 0;}  // declaration & calling
+```
+```js
+function f() {
+    new.target; // returns undefined if the function was called without 'new' otherwise returns the function
+}
 ```
 - When a function is executed with new:
     - A new empty object is created and assigned to `this`.
