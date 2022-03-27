@@ -21,7 +21,7 @@
     type="text/javascript" <!-- used for js modules in modern HTML -->
     language="js"          <!-- a bit redundant -->
     src="script.js"        <!-- external reference, ignores <script> body when set -->
-                           <!-- other security fields related available too -->
+                           <!-- other security related fields available too -->
 ></script>
 ```
 ---
@@ -96,3 +96,11 @@ a ?? b ?? c;
 result = condition ? x : y;
 ```
 ---
+<br>
+
+## Scope
+```js
+{
+    // code block
+}
+```
