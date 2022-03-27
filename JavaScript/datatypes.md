@@ -9,8 +9,8 @@
 | `Number`    | `NaN, -Infinity, -1.1, -1, -0, 0, 1, 1.1, Infinity`|
 | `BigInt`    |                    |
 | `String`    | ```"", '', `` ```  |
-| `Symbol`    | `Symbol()`         |
-| `Object`    | `{}, Array, Set, Map, Function, ...`|
+| `Symbol`    | `{[Symbol("key")]:"value"}`|
+| `Object`    | `{}, [], Function` |
 ---
 <br>
 
@@ -128,9 +128,14 @@ s.description; // returns description
 Object.getOwnPropertySymbols(obj); // returns all symbolic keys from an object
 Reflect.ownKeys(obj); // returns all keys (including symbolic keys) from an object
 
-// global symbol registry
+// Global Symbol Registry
 Symbol.for("key"); // returns (or creates if non-existant) global symbol
 Symbol.keyFor(symbol); // reverse lookup (returns a key for a given global symbol)
+
+// Symbol usage
+let obj = {
+    [Symbol("key")]: "value"
+}
 ```
 - Represents a unique identifier
 - Use cases: create "hidden" properties for an object
@@ -142,7 +147,7 @@ Symbol.keyFor(symbol); // reverse lookup (returns a key for a given global symbo
 ## Object
 ---
 ```js
-see data_types.object.md
+see datatypes.object.md
 ```
 ---
 <br>
@@ -150,6 +155,6 @@ see data_types.object.md
 ## Specification Types
 ---
 ```js
-see data_types.specification.md
+see datatypes.specification.md
 ```
 ---

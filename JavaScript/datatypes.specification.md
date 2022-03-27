@@ -1,13 +1,22 @@
 # Specification Types
 - used internally by the language, can't explicitly be used
 ## Reference Type
+---
 The value of Reference Type is a three-value combination (base, name, strict), where:
 - base is the object.
 - name is the property name.
-- strict is true if use strict is in effect.
+- strict is true if "use strict" is in effect.
+```js
+let obj = { f(){} }
+obj.f // returns a value of the reference type
+```
+---
+<br>
+
 ## Lexical Environment
-Extract("https://www.youtube.com/watch?v=QyUFheng6J0")
+---
 https://javascript.info/closure
+https://www.youtube.com/watch?v=QyUFheng6J0
 - The internal data model of every executing function, block & script
 - Data Model
     - **Reference:** a pointer to the parent lexical environment (is null for the top level lexical environment (the global object //?))
@@ -37,3 +46,33 @@ https://javascript.info/closure
 ### \[\[Environment\]\]
 - The Lexical Environment of the `function` declaration has a pointer to the lexical environment that it was declared in
 - certain functions definitions don't have this pointer //?
+
+```js
+function f() {
+    let x = 0;
+    return function() {return ++x;}
+}
+
+let a = f(); // creates a new Lexical Environment `A` (containing a variable x),
+             // and returns a function whose LexicalEnvironment.[[Environment]]
+             // will point to `A`
+
+let b = f(); // creates a new Lexical Environment `B` (containing a variable x),
+             // and returns a function whose LexicalEnvironment.[[Environment]]
+             // will point to `B`
+
+
+a(); // creates a Lexical Environment whose LexicalEnvironment.[[Environment]]
+     // points to `A`, and then executes `return ++x` (returns 1)
+
+a(); // creates a Lexical Environment whose LexicalEnvironment.[[Environment]]
+     // points to `A`, and then executes `return ++x` (returns 2)
+
+
+b(); // creates a Lexical Environment whose LexicalEnvironment.[[Environment]]
+     // points to `B`, and then executes `return ++x` (returns 1)
+
+b(); // creates a Lexical Environment whose LexicalEnvironment.[[Environment]]
+     // points to `B`, and then executes `return ++x` (returns 2)
+```
+---
