@@ -74,16 +74,15 @@ f();                     // calling
 - Name is not visible outside the function expression
 ### Immediately-Invoked Function Expressions (IIFE)
 ```js
-    (function(){})(); // declaration & calling
-    //  function(){}     <-- function expression (that will be parsed as a function declaration,
-    //                                            but will throw a SyntaxError)
-    // (function(){})    <-- function expression returned to no where
-    // (function(){})(); <-- function expression returned and called
+(function(){})(); // declaration & calling
+//  function(){}     <-- function expression (that will be parsed as a function declaration, but will throw a SyntaxError)
+// (function(){})    <-- function expression returned to no where
+// (function(){})(); <-- function expression returned and called
 
-    /*Other equivalent variations*/
-    (function(){}());
-    !function(){}();
-    +function(){}();
+/*Other equivalent variations*/
+(function(){}());
+!function(){}();
++function(){}();
 ```
 - https://javascript.info/var#iife
 ### Arrow Functions
@@ -132,11 +131,9 @@ let obj = {
 let f = obj.f; // (`this` is set to `undefined`)
 f(0);          // call fails because g() is not found.
 
-f.call(obj, 0); // calls f() using the `this` of `obj`
-                // (args are passed individually or via spread syntax)
+f.call(obj, 0); // calls f() using the `this` of `obj` (args are passed individually or via spread syntax)
 
-f.apply(obj, [0]); // calls f() using the `this` of `obj`
-                   // (args are passed in an array-like)
+f.apply(obj, [0]); // calls f() using the `this` of `obj` (args are passed in an array-like)
 // apparently most JavaScript engines internally optimize this one better (citation needed)
 ```
 - Calls the function with a specified `this`
