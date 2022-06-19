@@ -10,7 +10,7 @@
 | `BigInt`    |                    |
 | `String`    | ```"", '', `` ```  |
 | `Symbol`    | `{[Symbol("key")]:"value"}`|
-| `Object`    | `{}, [], Function` |
+| `Object`    | `{}, [], function(){}` |
 ---
 <br>
 
