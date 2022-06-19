@@ -1,6 +1,6 @@
 # Functions
 
-## Function Componenets
+## Function Components
 ---
 ### Parameters & Arguments
 ```js
