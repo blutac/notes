@@ -12,7 +12,7 @@ switch(x) { // equality check is always strict
     default:  /*body*/
 }
 
-try {} catch() {} finally {}
+try {} catch(e) {} finally {}
 ```
 ---
 <br>
@@ -26,16 +26,8 @@ while(condition) {}
 for (initialiser; condition; post_body) {}
 
 // Object Specific
-for (let item of obj) {}         // iterates the object using it's defined iterator
-for (let key in obj) {}          // iterates over all properties in an object
-for (key in obj) { obj[key] }    // Omits Symbols //?
-obj.keys(obj)                    // Omits Symbols
-
-// Array Specific
-for (let value of array) {} // implemented to iterate over all values (from numeric properties)
-for (let key in array) {}   // returns all (numeric) properties
-[0,0].forEach(callback);
-[0,0].forEach(function(item, index, array) {});
+for (let value of obj) {} // iterates the object using it's defined iterator
+for (let key in obj) {}   // iterates over all enumerable keys in an object (excludes: Symbols, __proto__)
 ```
 ---
 <br>

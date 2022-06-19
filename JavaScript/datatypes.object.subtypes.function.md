@@ -51,7 +51,6 @@ let obj = { f() {} }; // shorthand (does something different regarding inheritan
 // calling
 obj.f();
 obj['f']();
-
 ```
 ### Function Declaration
 ```js
@@ -85,7 +84,7 @@ f();                     // calling
 +function(){}();
 ```
 - https://javascript.info/var#iife
-### Arrow Functions
+### Arrow Function
 ```js
 // declaration
 let f = () => expression;
@@ -99,6 +98,21 @@ f(0, 0); // calling
 - Doesn't have their own `this` context, all uses of `this` refer to the outer context
 - Cannot be `.bind(this)`
 - Cannot be called with `new`
+### Constructor function
+```js
+function f() {this.key = 0;}  // declaration
+let obj = new f()               // calling
+```
+- When a function is executed with new:
+    - A new empty object is created and assigned to `this`.
+    - sets `obj.[[prototype]] = f.prototype`
+    - The function body executes.
+    - The value of `this` is returned.
+        - unless the function returns a non-null object reference. Then that object reference is returned instead.
+```js
+function f() { new.target; }
+```
+- `new.target` returns undefined if the function was called without 'new' otherwise returns the function
 ### new Function
 ```js
 // declaration
@@ -108,19 +122,7 @@ let f = new Function('x', 'y', 'return x + y');
 f(1, 2); // calling
 ```
 - The function's `[[Environment]]` is set to the global Lexical Environment
-### new function
-```js
-let obj = new function() {this.field = 0;}  // declaration & calling
-```
-```js
-function f() {
-    new.target; // returns undefined if the function was called without 'new' otherwise returns the function
-}
-```
-- When a function is executed with new:
-    - A new empty object is created and assigned to `this`.
-    - The function body executes.
-    - The value of `this` is returned.
+- Sets `f.[[prototype]] = Function.prototype`
 ---
 <br>
 
@@ -191,4 +193,15 @@ function g(a, b, ...c){}
 g.length; // returns "2"
 ```
 - Returns the number of parameters
+---
+
+### prototype
+```js
+function f(){}
+f.prototype;
+```
+- When invoked via `new` e.g. `let g = new f()`, sets `g.[[prototype]] = f.prototype`
+- Initial value is: `{ constructor: f }`
+- Has a value type of either `null` or `object`
+- Only used in functions
 ---

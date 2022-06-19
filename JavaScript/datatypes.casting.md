@@ -59,7 +59,7 @@ else if(hint === "number" || hint === "default")
 ```js
 String, Number, Boolean, Symbol
 ```
-- Avoid using with 'new'
-- For `Number` use `..` or `()` to call methods against a number
+- Avoid using with `new`
+- For `Number` use `..` or `( )` to call methods against a number
 ---
 <br>

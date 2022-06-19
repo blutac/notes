@@ -5,7 +5,7 @@
 The value of Reference Type is a three-value combination (base, name, strict), where:
 - base is the object.
 - name is the property name.
-- strict is true if "use strict" is in effect.
+- strict is true if `"use strict"` is in effect.
 ```js
 let obj = { f(){} }
 obj.f // returns a value of the reference type
@@ -43,7 +43,7 @@ https://www.youtube.com/watch?v=QyUFheng6J0
 - Optimisations may apply
 - Garbage collection applies
 
-### \[\[Environment\]\]
+### `[[Environment]]`
 - The Lexical Environment of the `function` declaration has a pointer to the lexical environment that it was declared in
 - certain functions definitions don't have this pointer //?
 

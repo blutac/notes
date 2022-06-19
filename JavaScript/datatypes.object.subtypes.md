@@ -1,5 +1,20 @@
 # Object Subtypes
 
+## Inheritance Structure
+---
+### Object Inheritance
+- `{} / new Object() -> Object.prototype -> null`
+- `[] / new Array()  -> Array.prototype -> Object.prototype -> null`
+- `function f(){} / new function() -> Function.prototype -> Object.prototype -> null`
+- More base objects available (e.g. `Date.prototype`)
+### Primitive Object Wrappers
+- `"" -> String.prototype`
+- `0  -> Number.prototype`
+- `true -> Boolean.prototype`
+- No object wrappers available for `null` & `undefined`
+---
+<br>
+
 ## Function
 ---
 ```

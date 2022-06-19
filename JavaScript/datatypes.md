@@ -133,11 +133,15 @@ Symbol.for("key"); // returns (or creates if non-existant) global symbol
 Symbol.keyFor(symbol); // reverse lookup (returns a key for a given global symbol)
 
 // Symbol usage
+let s = Symbol("");
 let obj = {
-    [Symbol("key")]: "value"
-}
+    [s]: "value",
+    [Symbol("")]: "value"
+};
+obj2[s] = "value";
 ```
 - Represents a unique identifier
+- Every created Symbol is unique
 - Use cases: create "hidden" properties for an object
 - Object properties are of type `String` or `Symbol`
 - https://tc39.github.io/ecma262/#sec-well-known-symbols
