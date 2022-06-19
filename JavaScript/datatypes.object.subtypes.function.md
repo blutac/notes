@@ -101,7 +101,7 @@ f(0, 0); // calling
 ### Constructor function
 ```js
 function f() {this.key = 0;}  // declaration
-let obj = new f()               // calling
+let obj = new f()             // calling
 ```
 - When a function is executed with new:
     - A new empty object is created and assigned to `this`.
