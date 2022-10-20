@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <base href="" target=""> -->
+        <!-- <link rel="stylesheet" type="text/css" media="screen" href="./x.css"> -->
+        <title>HTML Sampler</title>
+    </head>
+
+    <style>
+        .zone {
+            border: 1px dashed;
+            /* margin: 4px; */
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+    
+    <body>
+        <!-- soruce: https://www.w3schools.com/tags/ref_byfunc.asp -->
+        <hr>
+        <h1><u>> Formatting</u></h1>
+        <div class="zone">
+            <h1>Header 1</h1>
+            <h2>Header 2</h2>
+            <h3>Header 3</h3>
+            <h4>Header 4</h4>
+            <h5>Header 5</h5>
+            <h6>Header 6</h6>
+            <p>paragraph</p>
+        </div>
+        <br>
+        <div class="zone">
+            <strong>&lt;strong&gt; = Defines important text</strong><br>
+            <b>&lt;b&gt; = Defines bold text</b><br>
+            <em>&lt;em&gt; = Defines emphasized text </em><br>
+            <i>&lt;i&gt; = Defines a part of text in an alternate voice or mood</i><br>
+            <u>&lt;u&gt; = Defines some text that is unarticulated and styled differently from normal text</u><br>
+            <ins>&lt;ins&gt; = Defines a text that has been inserted into a document</ins><br>
+            <s>&lt;s&gt; = Defines text that is no longer correct</s><br>
+            <del>&lt;del&gt; = Defines text that has been deleted from a document</del><br>
+            <mark>&lt;mark&gt; = Defines marked/highlighted text</mark><br>
+            <small>&lt;small&gt; = Defines smaller text</small><br>
+            <sub>&lt;sub&gt; = Defines subscripted text</sub><br>
+            <sup>&lt;sup&gt; = Defines superscripted text</sup><br>
+        </div>
+        <br>
+        <div class="zone">
+            <time>&lt;time&gt; = Defines a specific time (or datetime)</time><br>
+            <dfn>&lt;dfn&gt; = Specifies a term that is going to be defined within the content</dfn><br>
+            <abbr>&lt;abbr&gt; = Defines an abbreviation or an acronym</abbr><br>
+            <address>&lt;address&gt; = Defines contact information for the author/owner of a document/article</address>
+            <cite>&lt;cite&gt; = Defines the title of a work</cite><br>
+            <q>&lt;q&gt; = Defines a short quotation</q><br>
+            <blockquote>&lt;blockquote&gt; = Defines a section that is quoted from another source</blockquote>
+            <rt>&lt;rt&gt; = Defines an explanation/pronunciation of characters (for East Asian typography)</rt><br>
+            <ruby>&lt;ruby&gt; = Defines a ruby annotation (for East Asian typography)</ruby><br>
+            <rp></rp>&lt;rp&gt; = Defines what to show in browsers that do not support ruby annotations<br>
+        </div>
+        <br>
+        <div class="zone">
+            <pre>&lt;pre&gt; = Defines preformatted text</pre>
+            <code>&lt;code&gt; = Defines a piece of computer code</code><br>
+            <samp>&lt;samp&gt; = Defines sample output from a computer program</samp><br>
+            <kbd>&lt;kbd&gt; = Defines keyboard input</kbd><br>
+            <var>&lt;var&gt; = Defines a variable</var><br>
+        </div>
+        <br>
+        <div class="zone">
+            <bdi>&lt;bdi&gt; = Isolates a part of text that might be formatted in a different direction from other text outside it</bdi><br>
+            <bdo>&lt;bdo&gt; = Overrides the current text direction</bdo><br>
+            <wbr>&lt;wbr&gt; = Defines a possible line-break<br>
+            <template></template>&lt;template&gt; = Defines a container for content that should be hidden when the page loads<br>
+        </div>
+
+        <hr>
+
+        <h1><u>> Lists</u></h1>
+        <!-- <menu> == <ul> -->
+        <ul>&lt;ul&gt; = Defines an unordered list
+            <li>&lt;li&gt; = Defines a list item</li>
+            <li>&lt;li&gt; = Defines a list item
+                <ul>
+                    <li>&lt;li&gt; = Defines a list item</li>
+                    <li>&lt;li&gt; = Defines a list item</li>
+                    <li>&lt;li&gt; = Defines a list item</li>
+                </ul>
+            </li>
+            <li>&lt;li&gt; = Defines a list item</li>
+        </ul>
+        <ol>&lt;ol&gt; = Defines an ordered list
+            <li>&lt;li&gt; = Defines a list item</li>
+            <li>&lt;li&gt; = Defines a list item
+                <ol>
+                    <li>&lt;li&gt; = Defines a list item</li>
+                    <li>&lt;li&gt; = Defines a list item</li>
+                    <li>&lt;li&gt; = Defines a list item</li>
+                </ol>
+            </li>
+            <li>&lt;li&gt; = Defines a list item</li>
+        </ol>
+        <dl>&lt;dl&gt; = Defines a description list
+            <dt>&lt;dt&gt; = Defines a term/name in a description list</dt>
+            <dd>&lt;dd&gt; = Defines a description of a term/name in a description list</dd>
+            <dt>&lt;dt&gt; = Defines a term/name in a description list</dt>
+            <dd>&lt;dd&gt; = Defines a description of a term/name in a description list</dd>
+        </dl>
+
+        <hr>
+
+        <h1><u>> Tables</u></h1>
+        <table>
+            <caption>table caption</caption>
+
+            <colgroup>
+                <col span="2" style="background-color:darkgrey">
+                <col style="background-color:grey">
+            </colgroup>
+
+            <thead>
+                <tr>
+                    <th>table.head.Hcell</th>
+                    <th>table.head.Hcell</th>
+                    <th>table.head.Hcell</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>table.body.cell</td>
+                    <td>table.body.cell</td>
+                    <td>table.body.cell</td>
+                </tr>
+                <tr>
+                    <td>table.body.cell</td>
+                    <td>table.body.cell</td>
+                    <td>table.body.cell</td>
+                </tr>
+                <tr>
+                    <td>table.body.cell</td>
+                    <td>table.body.cell</td>
+                    <td>table.body.cell</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td>table.foot.cell</td>
+                    <td>table.foot.cell</td>
+                    <td>table.foot.cell</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <hr>
+
+        <h1><u>> Links</u></h1>
+        <a href="">&lt;a&gt; = Defines a hyperlink</a>
+        <nav>&lt;nav&gt; = Defines navigation links:
+            <a href="">link-A</a>
+            <a href="">link-B</a>
+        </nav>
+        
+        <hr>
+        
+        <h1><u>> Form Controls</u></h1>
+        <form action="" method="get" oninput="var_output.value=parseInt(var_select.value)*parseInt(var_textarea.value)">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">&lt;form&gt;</a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">&lt;input&gt;</a>
+            <br><br>
+            <fieldset>
+                <legend>Pickers (Control)</legend>
+                <label for="input_hidden">input:hidden</label>                <input type="hidden" name="var_hidden" id="input_hidden" value=""><br>
+                <label>input:checkbox
+                    <input type="checkbox" name="var_checkbox" id="option-1" value="1">   <label for="option-1">Option 1</label>
+                    <input type="checkbox" name="var_checkbox" id="option-2" value="2">   <label for="option-2">Option 2</label>
+                </label>
+                <br>
+                <label>input:radio
+                    <input type="radio" name="var_radio" id="option-A" value="A">            <label for="option-A">Option A</label>
+                    <input type="radio" name="var_radio" id="option-B" value="B">            <label for="option-B">Option B</label>
+                    <input type="radio" name="var_radio" id="option-C" value="C">            <label for="option-C">Option C</label>
+                </label>
+                <br>
+                <label for="input_range">input:range</label>                  <input type="range" name="var_range" id="input_range" value="" min="0" max="10" step=""><br>
+                <label for="input_number">input:number</label>                <input type="number" name="var_number" id="input_number" value="" min="" max="" step=""><br>
+                <label for="tag_select">&lt;select&gt;</label>
+                <select id="tag_select" name="var_select">
+                    <option value="0">Option 0</option>
+                    <optgroup label="Group 1">
+                        <option value="1.1">Option 1.1</option>
+                    </optgroup>
+                    <optgroup label="Group 2">
+                        <option value="2.1">Option 2.1</option>
+                        <option value="2.2">Option 2.2</option>
+                    </optgroup>
+                </select>
+                <br>
+                <label for="tag_datalist">&lt;datalist&gt;</label>
+                <input list="tag_datalist" name="var_list" id="tag_list">
+                <datalist id="tag_datalist">
+                    <option value="0">Option 0</option>
+                    <option value="1.1">Option 1.1</option>
+                    <option value="2.1">Option 2.1</option>
+                    <option value="2.2">Option 2.2</option>
+                </datalist>
+                <br>
+                <label for="input_color">input:color</label>                  <input type="color" name="var_color" id="input_color"><br>
+                <label for="input_file">input:file</label>                    <input type="file" name="var_file" id="input_file" accept="image/png, image/jpeg" multiple><br>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Pickers (datetime)</legend>
+                <label for="input_datetime-local">input:datetime-local</label><input type="datetime-local" name="var_datetime-local" id="input_datetime-local" value="" min="" max="" step=""><br>
+                <label for="input_month">input:month</label>                  <input type="month" name="var_month" id="input_month" value="" min="" max="" step=""><br>
+                <label for="input_week">input:week</label>                    <input type="week" name="var_week" id="input_week" value="" min="" max="" step=""><br>
+                <label for="input_date">input:date</label>                    <input type="date" name="var_date" id="input_date" value="" min="" max="" step=""><br>
+                <label for="input_time">input:time</label>                    <input type="time" name="var_time" id="input_time" value="" min="" max="" step=""><br>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Text</legend>
+                <label for="tag_textarea">&lt;textarea&gt;</label>
+                <textarea id="tag_textarea" name="var_textarea" rows="1" cols="50" placeholder="multiline input"></textarea><br>
+                <label for="input_text">input:text</label>                    <input type="text" name="var_text" id="input_text"><br>
+                <label for="input_search">input:search</label>                <input type="search" name="var_search" id="input_search"><br>
+                <label for="input_email">input:email</label>                  <input type="email" name="var_email" id="input_email"><br>
+                <label for="input_url">input:url</label>                      <input type="url" name="var_url" id="input_url"><br>
+                <label for="input_tel">input:tel</label>                      <input type="tel" name="var_tel" id="input_tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br>
+                <label for="input_password">input:password</label>            <input type="password" name="var_password" id="input_password"><br>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Buttons</legend>
+                <label for="tag_button">&lt;button&gt;</label>                <button id="tag_button">button</button><br>
+                <label for="input_button">input:button</label>                <input type="button" id="input_button" value="Button"><br>
+                <label for="input_reset">input:reset</label>                  <input type="reset" id="input_reset"><br>
+                <label for="input_image">input:image</label>                  <input type="image" id="input_image"> (button)<br> <!-- also sends the X and Y coordinates of the click that activated the image button -->
+                <label for="input_submit">input:submit</label>                <input type="submit" id="input_submit"><br>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Output</legend>
+                <label for="tag_output">&lt;output&gt;</label>      <output id="tag_output" name="var_output" for="tag_select tag_textarea">output</output><br>
+                <label for="tag_meter">&lt;meter&gt;</label>        <meter id="tag_meter"></meter><br>
+                <label for="tag_progress">&lt;progress&gt;</label>  <progress id="tag_progress"></progress><br>
+            </fieldset>
+    </form>
+
+    <hr>
+
+    <h1><u>> Semantic Structures</u></h1>
+    <dialog id="tag_dialog"  open>
+        &lt;dialog&gt; = Defines a dialog box or window
+        <form method="dialog">
+            <button value="">OK</button>
+        </form>
+    </dialog>
+
+    <div>&lt;div&gt; = <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements">a block-level element</a></div>
+    <span>&lt;span&gt; = <a href="hhttps://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements">an inline element</a></span>
+    <header>&lt;header&gt; = Defines a header for a document or section</header>
+    <footer>&lt;footer&gt; = Defines a footer for a document or section</footer>
+    <main>&lt;main&gt; = Specifies the main content of a document</main>
+    <section>&lt;section&gt; = Defines a section in a document</section>
+    <article>&lt;article&gt; = Defines an article</article>
+    <aside>&lt;aside&gt; = Defines content aside from the page content</aside>
+    <data value="0">&lt;data&gt; = Adds a machine-readable translation of a given content</data>
+    <details open="true">
+        <summary>&lt;summary&gt; = details label</summary>
+        &lt;details&gt; = Defines additional details that the user can view or hide
+    </details>
+    <button onclick="document.getElementById('tag_dialog').showModal();">toggle dialog</button>
+
+    <hr>
+
+    <h1><u>> Media Tags</u></h1>
+    Frames
+    <br>&lt;iframe&gt; = Defines an inline frame
+    <br><br>Images
+    <br>&lt;img&gt; = Defines an image
+    <br>&lt;picture&gt; = Defines a container for multiple image resources
+    <br>&lt;svg&gt; = Defines a container for SVG graphics
+    <br>&lt;map&gt; = Defines a client-side image map
+    <br>&lt;area&gt; = Defines an area inside an image map
+    <br>&lt;canvas&gt; = Used to draw graphics, on the fly, via scripting (usually JavaScript)
+    <br>&lt;figure&gt; = Specifies self-contained content
+    <br>&lt;figcaption&gt; = Defines a caption for a -figure- element
+    <br><br>Audio / Video
+    <br>&lt;audio&gt; = Defines sound content
+    <br>&lt;video&gt; = Defines a video or movie
+    <br>&lt;source&gt; = Defines multiple media resources for media elements (-video-, -audio- and -picture-)
+    <br>&lt;track&gt; = Defines text tracks for media elements (-video- and -audio-)
+    <br><br>Programming
+    <br>&lt;link&gt; = Defines the relationship between a document and an external resource (most used to link to style sheets)
+    <br>&lt;style&gt; = Defines style information for a document
+    <br>&lt;script&gt; = Defines a client-side script
+    <br>&lt;noscript&gt; = Defines an alternate content for users that do not support client-side scripts
+    <br>&lt;embed&gt; = Defines a container for an external (non-HTML) application
+    <br>&lt;object&gt; = Defines an embedded object
+    <br>&lt;param&gt; = Defines a parameter for an object
+<!--
+    MEDIA TAGS
+        Frames
+        <iframe></iframe> 	Defines an inline frame
+        
+        Images
+        <img></img> 	Defines an image
+        <map></map> 	Defines a client-side image map
+        <area></area> 	Defines an area inside an image map
+        <canvas></canvas> 	Used to draw graphics, on the fly, via scripting (usually JavaScript)
+        <figcaption></figcaption> 	Defines a caption for a -figure- element
+        <figure></figure> 	Specifies self-contained content
+        <picture></picture> 	Defines a container for multiple image resources
+        <svg></svg> 	Defines a container for SVG graphics
+        
+        Audio / Video
+        <audio></audio> 	Defines sound content
+        <source></source> 	Defines multiple media resources for media elements (-video-, -audio- and -picture-)
+        <track></track> 	Defines text tracks for media elements (-video- and -audio-)
+        <video></video> 	Defines a video or movie
+        
+        Programming
+        <link></link> 	Defines the relationship between a document and an external resource (most used to link to style sheets)
+        <style></style> 	Defines style information for a document
+        <script></script> 	Defines a client-side script
+        <noscript></noscript> 	Defines an alternate content for users that do not support client-side scripts
+        <embed></embed> 	Defines a container for an external (non-HTML) application
+        <object></object> 	Defines an embedded object
+        <param></param> 	Defines a parameter for an object
+-->
+    </body>
+</html>
