@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            :root {
+                font-family: consolas;
+                --margin-size: 10px;
+                --margin-color: #76715566;
+                --border: 2px solid red;
+                --padding-size: 20px;
+                --padding-content-color: linear-gradient(lightblue, lightblue), linear-gradient(MediumPurple, MediumPurple);
+                --content-size: 10px;
+            }
+
+            .box {
+                /*/// Box Model ///*/
+                margin: var(--margin-size);
+                border: var(--border);
+                padding: var(--padding-size);
+                
+                box-sizing: border-box;
+                /* height: 70px; */
+                /* width: 70px; */
+                /* block-size: 80px; */
+                /* inline-size: 80px; */
+                /* writing-mode: horizontal-tb; */
+                
+                /*/// Typography ///*/
+                /* line-height: 30px; */
+                /* font-size: 30px; */
+                /* font-family: consolas; */
+                
+                resize: both;
+                overflow: auto;
+
+                outline: var(--margin-size) dashed var(--margin-color);
+                background-image: var(--padding-content-color);
+                background-clip: content-box, padding-box;
+            }
+
+            .parent {
+                /*/// Normal Flow ///*/
+                /* display: unset; */
+
+                /*/// Block ///*/
+                /* display: block; */
+                /* display: block flow; */
+                /* display: block flow-root; */
+                /* display: block flex; */
+                /* display: block grid; */
+                /* display: block table; */
+                /* display: block ruby; */
+
+                /*/// Inline ///*/
+                /* display: inline; */
+                /* display: inline flow; */
+                /* display: inline flow-root; */
+                /* display: inline flex; */
+                /* display: inline grid; */
+                /* display: inline table; */
+                /* display: inline ruby; */
+
+                /*/// List-Item ///*/
+                /* display: list-item; */
+                /* display: list-item flow; */
+                /* display: list-item flow-root; */
+                /* display: list-item block flow; */
+                /* display: list-item block flow-root; */
+                /* display: list-item inline flow; */
+                /* display: list-item inline flow-root; */
+
+                /*/// Rwby ///*/
+                /* display: ruby; */
+                    /* display: ruby-base; */
+                    /* display: ruby-text; */
+                    /* display: ruby-base-container; */
+                    /* display: ruby-text-container; */
+                /* ruby-align: unset; */
+                /* ruby-merge: unset; */
+                /* ruby-position: unset; */
+
+                /*/// Table ///*/
+                /* display: table; */
+                    /* display: table-row-group; */
+                    /* display: table-header-group; */
+                    /* display: table-footer-group; */
+                    /* display: table-row; */
+                    /* display: table-cell; */
+                    /* display: table-column-group; */
+                    /* display: table-column; */
+                    /* display: table-caption; */
+                /* table-layout: unset; */
+                /* caption-side: unset; */
+                /* empty-cells: unset; */
+
+                /*/// Flex ///*/
+                /* display: flex; */
+                /* flex: unset; */
+                /* flex-basis: unset; */
+                /* flex-direction: unset; */
+                /* flex-flow: unset; */
+                /* flex-grow: unset; */
+                /* flex-shrink: unset; */
+                /* flex-wrap: unset; */
+
+                /*/// Grid ///*/
+                /* display: grid; */
+                /* grid: unset; */
+                /* grid-area: unset; */
+                /* grid-auto-columns: unset; */
+                /* grid-auto-flow: unset; */
+                /* grid-auto-rows: unset; */
+                /* grid-column: unset; */
+                /* grid-column-end: unset; */
+                /* grid-column-start: unset; */
+                /* grid-row: unset; */
+                /* grid-row-end: unset; */
+                /* grid-row-start: unset; */
+                /* grid-template: unset; */
+                /* grid-template-areas: unset; */
+                /* grid-template-columns: unset; */
+                /* grid-template-rows: unset; */
+
+                /*/// Multi-Column ///*/
+                /* columns: 3; */
+                /* column-count: unset; */
+                /* column-width: unset; */
+                /* column-fill: unset; */
+                /* column-rule: unset; */
+                /* column-rule-color: unset; */
+                /* column-rule-style: unset; */
+                /* column-rule-width: unset; */
+                /* column-span: unset; */
+
+                /*/// Float ///*/
+                /* float: unset; */
+                /* clear: unset; */
+
+                /*/// Positioned ///*/
+                /* position: unset; */
+                /* top: 10px; */
+                /* bottom: 10px; */
+                /* left: 10px; */
+                /* right: 10px; */
+                /* z-index: unset; */
+
+                /*/// Shared Layout Modifiers ///*/
+                /*order: unset;*/             /* Grid|Flex */
+                /*align-content: unset;*/     /* Grid|Flex */
+                /*align-items: unset;*/       /* Grid|Flex */
+                /*align-self: unset;*/        /* Grid|Flex */
+                /*align-tracks: unset;*/      /* Grid */
+                /*justify-content: unset;*/   /* Grid|Flex */
+                /*justify-items: unset;*/     /* Grid|Flex|Table|Absolutely-Positioned|Block-Level */
+                /*justify-self: unset;*/      /* Grid|Flex|Table|Absolutely-Positioned|Block-Level */
+                /*justify-tracks: unset;*/    /* Grid */
+                /*place-content: unset;*/     /* Grid|Flex */
+                /*place-items: unset;*/       /* Grid|Flex */
+                /*place-self: unset;*/        /* Grid|Flex */
+                /*masonry-auto-flow: unset;*/ /* Grid|Flex */
+                /*gap: unset;*/               /* Grid|Flex|Multi-Column */
+                /*row-gap: unset;*/           /* Grid|Flex|Multi-Column */
+                /*column-gap: unset;*/        /* Grid|Flex|Multi-Column */
+                /*vertical-align: unset;*/    /* Inline|Inline-block|Table-cell */
+
+                /*/// Directionality ///*/
+                /* writing-mode: unset; */
+                /* direction: unset; */
+                /* unicode-bidi: unset; */
+
+                /*/// Box Generation ///*/
+                /* display: none; */
+                /* display: contents; */
+                /* visibility: unset; */
+                /* content-visibility: unset; */
+            }
+
+            .child {
+                /*/// Normal Flow ///*/
+                /* display: unset; */
+
+                /*/// Block ///*/
+                /* display: block; */
+                /* display: block flow; */
+                /* display: block flow-root; */
+                /* display: block flex; */
+                /* display: block grid; */
+                /* display: block table; */
+                /* display: block ruby; */
+
+                /*/// Inline ///*/
+                /* display: inline; */
+                /* display: inline flow; */
+                /* display: inline flow-root; */
+                /* display: inline flex; */
+                /* display: inline grid; */
+                /* display: inline table; */
+                /* display: inline ruby; */
+
+                /*/// List-Item ///*/
+                /* display: list-item; */
+                /* display: list-item flow; */
+                /* display: list-item flow-root; */
+                /* display: list-item block flow; */
+                /* display: list-item block flow-root; */
+                /* display: list-item inline flow; */
+                /* display: list-item inline flow-root; */
+
+                /*/// Rwby ///*/
+                /* display: ruby; */
+                    /* display: ruby-base; */
+                    /* display: ruby-text; */
+                    /* display: ruby-base-container; */
+                    /* display: ruby-text-container; */
+                /* ruby-align: unset; */
+                /* ruby-merge: unset; */
+                /* ruby-position: unset; */
+
+                /*/// Table ///*/
+                /* display: table; */
+                    /* display: table-row-group; */
+                    /* display: table-header-group; */
+                    /* display: table-footer-group; */
+                    /* display: table-row; */
+                    /* display: table-cell; */
+                    /* display: table-column-group; */
+                    /* display: table-column; */
+                    /* display: table-caption; */
+                /* table-layout: unset; */
+                /* caption-side: unset; */
+                /* empty-cells: unset; */
+
+                /*/// Flex ///*/
+                /* display: flex; */
+                /* flex: unset; */
+                /* flex-basis: unset; */
+                /* flex-direction: unset; */
+                /* flex-flow: unset; */
+                /* flex-grow: unset; */
+                /* flex-shrink: unset; */
+                /* flex-wrap: unset; */
+
+                /*/// Grid ///*/
+                /* display: grid; */
+                /* grid: unset; */
+                /* grid-area: unset; */
+                /* grid-auto-columns: unset; */
+                /* grid-auto-flow: unset; */
+                /* grid-auto-rows: unset; */
+                /* grid-column: unset; */
+                /* grid-column-end: unset; */
+                /* grid-column-start: unset; */
+                /* grid-row: unset; */
+                /* grid-row-end: unset; */
+                /* grid-row-start: unset; */
+                /* grid-template: unset; */
+                /* grid-template-areas: unset; */
+                /* grid-template-columns: unset; */
+                /* grid-template-rows: unset; */
+
+                /*/// Multi-Column ///*/
+                /* columns: 3; */
+                /* column-count: unset; */
+                /* column-width: unset; */
+                /* column-fill: unset; */
+                /* column-rule: unset; */
+                /* column-rule-color: unset; */
+                /* column-rule-style: unset; */
+                /* column-rule-width: unset; */
+                /* column-span: unset; */
+
+                /*/// Float ///*/
+                /* float: unset; */
+                /* clear: unset; */
+
+                /*/// Positioned ///*/
+                /* position: unset; */
+                /* top: 10px; */
+                /* bottom: 10px; */
+                /* left: 10px; */
+                /* right: 10px; */
+                /* z-index: unset; */
+
+                /*/// Shared Layout Modifiers ///*/
+                /*order: unset;*/             /* Grid|Flex */
+                /*align-content: unset;*/     /* Grid|Flex */
+                /*align-items: unset;*/       /* Grid|Flex */
+                /*align-self: unset;*/        /* Grid|Flex */
+                /*align-tracks: unset;*/      /* Grid */
+                /*justify-content: unset;*/   /* Grid|Flex */
+                /*justify-items: unset;*/     /* Grid|Flex|Table|Absolutely-Positioned|Block-Level */
+                /*justify-self: unset;*/      /* Grid|Flex|Table|Absolutely-Positioned|Block-Level */
+                /*justify-tracks: unset;*/    /* Grid */
+                /*place-content: unset;*/     /* Grid|Flex */
+                /*place-items: unset;*/       /* Grid|Flex */
+                /*place-self: unset;*/        /* Grid|Flex */
+                /*masonry-auto-flow: unset;*/ /* Grid|Flex */
+                /*gap: unset;*/               /* Grid|Flex|Multi-Column */
+                /*row-gap: unset;*/           /* Grid|Flex|Multi-Column */
+                /*column-gap: unset;*/        /* Grid|Flex|Multi-Column */
+                /*vertical-align: unset;*/    /* Inline|Inline-block|Table-cell */
+
+                /*/// Directionality ///*/
+                /* writing-mode: unset; */
+                /* direction: unset; */
+                /* unicode-bidi: unset; */
+
+                /*/// Box Generation ///*/
+                /* display: none; */
+                /* display: contents; */
+                /* visibility: unset; */
+                /* content-visibility: unset; */
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="box"></div>
+        <div class="box parent">
+            <div class="box child">X</div>
+            <div class="box child">X</div>
+            <div class="box child">X</div>
+        </div>
+        <div class="box"></div>
+    </body>
+</html>

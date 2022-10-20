@@ -1,0 +1,596 @@
+.Globals {
+    all: unset;
+    aspect-ratio: unset;
+}
+
+.UA {
+    /*/// UA Style ///*/
+    accent-color: unset;
+    color-scheme: unset;
+    forced-color-adjust: unset;
+    appearance: unset;
+    input-security: unset;
+    scrollbar-color: unset;
+    scrollbar-gutter: unset;
+    scrollbar-width: unset;
+    caret-color: unset;
+    cursor: unset;
+
+    /*/// UA Behaviour ///*/
+    pointer-events: unset;
+    touch-action: unset;
+    user-select: unset;
+    will-change: unset;
+    resize: unset;
+
+    overflow-anchor: unset;
+    overscroll-behavior: unset;
+    overscroll-behavior-x: unset;
+    overscroll-behavior-y: unset;
+    overscroll-behavior-block: unset;
+    overscroll-behavior-inline: unset;
+    scroll-behavior: unset;
+    scroll-margin: unset;
+    scroll-margin-top: unset;
+    scroll-margin-bottom: unset;
+    scroll-margin-left: unset;
+    scroll-margin-right: unset;
+    scroll-margin-block: unset;
+    scroll-margin-block-end: unset;
+    scroll-margin-block-start: unset;
+    scroll-margin-inline: unset;
+    scroll-margin-inline-end: unset;
+    scroll-margin-inline-start: unset;
+    scroll-padding: unset;
+    scroll-padding-top: unset;
+    scroll-padding-bottom: unset;
+    scroll-padding-left: unset;
+    scroll-padding-right: unset;
+    scroll-padding-block: unset;
+    scroll-padding-block-end: unset;
+    scroll-padding-block-start: unset;
+    scroll-padding-inline: unset;
+    scroll-padding-inline-end: unset;
+    scroll-padding-inline-start: unset;
+    scroll-snap-align: unset;
+    scroll-snap-stop: unset;
+    scroll-snap-type: unset;
+}
+
+.Box-Layout {
+    /*///////// Layout Modes /////////*/
+    /*
+        Outside: {block, inline, run-in}
+        Inside: {flow, flow-root, table, flex, grid, ruby}
+    */
+
+    /*/// Normal Flow ///*/
+    display: unset;
+
+    /*/// Block ///*/
+    /* display: block; */
+    /* display: block flow; */
+    /* display: block flow-root; */
+    /* display: block flex; */
+    /* display: block grid; */
+    /* display: block table; */
+    /* display: block ruby; */
+
+    /*/// Inline ///*/
+    /* display: inline; */
+    /* display: inline flow; */
+    /* display: inline flow-root; */
+    /* display: inline flex; */
+    /* display: inline grid; */
+    /* display: inline table; */
+    /* display: inline ruby; */
+
+    /*/// List-Item ///*/
+    /* display: list-item; */
+    /* display: list-item flow; */
+    /* display: list-item flow-root; */
+    /* display: list-item block flow; */
+    /* display: list-item block flow-root; */
+    /* display: list-item inline flow; */
+    /* display: list-item inline flow-root; */
+    list-style: unset;
+    list-style-image: unset;
+    list-style-position: unset;
+    list-style-type: unset;
+    counter-increment: unset;
+    counter-reset: unset;
+    counter-set: unset;
+
+    /*/// Rwby ///*/
+    /* display: ruby; */
+        /* display: ruby-base; */
+        /* display: ruby-text; */
+        /* display: ruby-base-container; */
+        /* display: ruby-text-container; */
+    ruby-align: unset;
+    ruby-merge: unset;
+    ruby-position: unset;
+
+    /*/// Table ///*/
+    /* display: table; */
+        /* display: table-row-group; */
+        /* display: table-header-group; */
+        /* display: table-footer-group; */
+        /* display: table-row; */
+        /* display: table-cell; */
+        /* display: table-column-group; */
+        /* display: table-column; */
+        /* display: table-caption; */
+    table-layout: unset;
+    caption-side: unset;
+    empty-cells: unset;
+
+    /*/// Flex ///*/
+    /* display: flex; */
+    flex: unset;
+    flex-basis: unset;
+    flex-direction: unset;
+    flex-flow: unset;
+    flex-grow: unset;
+    flex-shrink: unset;
+    flex-wrap: unset;
+
+    /*/// Grid ///*/
+    /* display: grid; */
+    grid: unset;
+    grid-area: unset;
+    grid-auto-columns: unset;
+    grid-auto-flow: unset;
+    grid-auto-rows: unset;
+    grid-column: unset;
+    grid-column-end: unset;
+    grid-column-start: unset;
+    grid-row: unset;
+    grid-row-end: unset;
+    grid-row-start: unset;
+    grid-template: unset;
+    grid-template-areas: unset;
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+
+    /*/// Multi-Column ///*/
+    columns: unset;
+    column-count: unset;
+    column-width: unset;
+    column-fill: unset;
+    column-rule: unset;
+    column-rule-color: unset;
+    column-rule-style: unset;
+    column-rule-width: unset;
+    column-span: unset;
+
+    /*/// Float ///*/
+    float: unset;
+    clear: unset;
+
+    /*/// Positioned ///*/
+    position: unset;
+    top: unset;
+    bottom: unset;
+    left: unset;
+    right: unset;
+    inset: unset;
+    inset-block: unset;
+    inset-block-end: unset;
+    inset-block-start: unset;
+    inset-inline: unset;
+    inset-inline-end: unset;
+    inset-inline-start: unset;
+    z-index: unset;
+
+    /*/// Shared Layout Modifiers ///*/
+    order: unset;             /* Grid|Flex */
+    align-content: unset;     /* Grid|Flex */
+    align-items: unset;       /* Grid|Flex */
+    align-self: unset;        /* Grid|Flex */
+    align-tracks: unset;      /* Grid */
+    justify-content: unset;   /* Grid|Flex */
+    justify-items: unset;     /* Grid|Flex|Table|Absolutely-Positioned|Block-Level */
+    justify-self: unset;      /* Grid|Flex|Table|Absolutely-Positioned|Block-Level */
+    justify-tracks: unset;    /* Grid */
+    place-content: unset;     /* Grid|Flex */
+    place-items: unset;       /* Grid|Flex */
+    place-self: unset;        /* Grid|Flex */
+    masonry-auto-flow: unset; /* Grid|Flex */
+    gap: unset;               /* Grid|Flex|Multi-Column */
+    row-gap: unset;           /* Grid|Flex|Multi-Column */
+    column-gap: unset;        /* Grid|Flex|Multi-Column */
+    vertical-align: unset;    /* Inline|Inline-block|Table-cell */
+
+    /*/// Directionality ///*/
+    writing-mode: unset;
+    direction: unset;
+    unicode-bidi: unset;
+
+    /*/// Box Generation ///*/
+    /* display: none; */
+    /* display: contents; */
+    visibility: unset;
+    content-visibility: unset;
+
+    /*/// Scoping ///*/
+    /* display: flow-root; */   /* Block Formatting Context */
+    isolation: unset;           /* Stacking Context */
+    contain: unset;             /* Containing Block, Stacking Context, Block Formatting Context, ... */
+    
+    /*/// Fragmentation ///*/
+    break-after: unset;
+    break-before: unset;
+    break-inside: unset;
+    page-break-after: unset;
+    page-break-before: unset;
+    page-break-inside: unset;
+    widows: unset;
+    orphans: unset;
+    box-decoration-break: unset;
+}
+
+.Box-Model {
+    margin: unset;
+    margin-top: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    margin-right: unset;
+    margin-block: unset;
+    margin-block-end: unset;
+    margin-block-start: unset;
+    margin-inline: unset;
+    margin-inline-end: unset;
+    margin-inline-start: unset;
+    margin-trim: unset;
+
+    border: unset;
+    border-top: unset;
+    border-top-color: unset;
+    border-top-left-radius: unset;
+    border-top-right-radius: unset;
+    border-top-style: unset;
+    border-top-width: unset;
+    border-bottom: unset;
+    border-bottom-color: unset;
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: unset;
+    border-bottom-style: unset;
+    border-bottom-width: unset;
+    border-left: unset;
+    border-left-color: unset;
+    border-left-style: unset;
+    border-left-width: unset;
+    border-right: unset;
+    border-right-color: unset;
+    border-right-style: unset;
+    border-right-width: unset;
+    border-block: unset;
+    border-block-color: unset;
+    border-block-end: unset;
+    border-block-end-color: unset;
+    border-block-end-style: unset;
+    border-block-end-width: unset;
+    border-block-start: unset;
+    border-block-start-color: unset;
+    border-block-start-style: unset;
+    border-block-start-width: unset;
+    border-block-style: unset;
+    border-block-width: unset;
+    border-inline: unset;
+    border-inline-color: unset;
+    border-inline-end: unset;
+    border-inline-end-color: unset;
+    border-inline-end-style: unset;
+    border-inline-end-width: unset;
+    border-inline-start: unset;
+    border-inline-start-color: unset;
+    border-inline-start-style: unset;
+    border-inline-start-width: unset;
+    border-inline-style: unset;
+    border-inline-width: unset;
+    border-start-end-radius: unset;
+    border-start-start-radius: unset;
+    border-end-end-radius: unset;
+    border-end-start-radius: unset;
+    border-image: unset;
+    border-image-outset: unset;
+    border-image-repeat: unset;
+    border-image-slice: unset;
+    border-image-source: unset;
+    border-image-width: unset;
+    border-collapse: unset;
+    border-color: unset;
+    border-radius: unset;
+    border-spacing: unset;
+    border-style: unset;
+    border-width: unset;
+
+    padding: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    padding-right: unset;
+    padding-block: unset;
+    padding-block-end: unset;
+    padding-block-start: unset;
+    padding-inline: unset;
+    padding-inline-end: unset;
+    padding-inline-start: unset;
+
+    box-sizing: unset;
+    height: unset;
+    max-height: unset;
+    min-height: unset;
+    width: unset;
+    max-width: unset;
+    min-width: unset;
+
+    block-size: unset;
+    max-block-size: unset;
+    min-block-size: unset;
+    inline-size: unset;
+    max-inline-size: unset;
+    min-inline-size: unset;
+
+    contain-intrinsic-block-size: unset;
+    contain-intrinsic-inline-size: unset;
+    contain-intrinsic-size: unset;
+    contain-intrinsic-width: unset;
+    contain-intrinsic-height: unset;
+}
+
+.Typography {
+    /*/// Text Spacing ///*/
+    letter-spacing: unset;
+    line-height: unset;
+    line-height-step: unset;
+
+    word-spacing: unset;
+    tab-size: unset;
+
+    /*/// Text Flow ///*/
+    overflow: unset;
+    overflow-x: unset;
+    overflow-y: unset;
+    overflow-block: unset;
+    overflow-inline: unset;
+    overflow-clip-margin: unset;
+    /* block-overflow: unset; */
+
+    /*/// Text Breaking ///*/
+    overflow-wrap: unset; /* word-wrap */
+    white-space: unset;
+    word-break: unset;
+    line-break: unset;
+    line-clamp: unset;
+    max-lines: unset;
+    hanging-punctuation: unset;
+    hyphenate-character: unset;
+    hyphens: unset;
+
+    color: unset;
+
+    font: unset;
+    font-family: unset;
+    font-feature-settings: unset;
+    font-kerning: unset;
+    font-language-override: unset;
+    font-optical-sizing: unset;
+    font-size: unset;
+    font-size-adjust: unset;
+    font-stretch: unset;
+    font-style: unset;
+    font-synthesis: unset;
+    font-variant: unset;
+    font-variant-alternates: unset;
+    font-variant-caps: unset;
+    font-variant-east-asian: unset;
+    font-variant-ligatures: unset;
+    font-variant-numeric: unset;
+    font-variant-position: unset;
+    font-variation-settings: unset;
+    font-weight: unset;
+
+    text-align: unset;
+    text-align-last: unset;
+    text-combine-upright: unset;
+    text-decoration: unset;
+    text-decoration-color: unset;
+    text-decoration-line: unset;
+    text-decoration-skip: unset;
+    text-decoration-skip-ink: unset;
+    text-decoration-style: unset;
+    text-decoration-thickness: unset;
+    text-emphasis: unset;
+    text-emphasis-color: unset;
+    text-emphasis-position: unset;
+    text-emphasis-style: unset;
+    text-indent: unset;
+    text-justify: unset;
+    text-orientation: unset;
+    text-overflow: unset;
+    text-rendering: unset;
+    text-shadow: unset;
+    text-size-adjust: unset;
+    text-transform: unset;
+    text-underline-offset: unset;
+    text-underline-position: unset;
+
+    math-style: unset;
+    quotes: unset;
+    initial-letter: unset;
+    initial-letter-align: unset;
+}
+
+.Graphics {
+    /*/// Box Styling ///*/
+    content: unset;
+
+    outline: unset;
+    outline-color: unset;
+    outline-offset: unset;
+    outline-style: unset;
+    outline-width: unset;
+
+    background: unset;
+    background-attachment: unset;
+    background-blend-mode: unset;
+    background-clip: unset;
+    background-color: unset;
+    background-image: unset;
+    background-origin: unset;
+    background-position: unset;
+    background-position-x: unset;
+    background-position-y: unset;
+    background-repeat: unset;
+    background-size: unset;
+
+    mask: unset;
+    mask-border: unset;
+    mask-border-mode: unset;
+    mask-border-outset: unset;
+    mask-border-repeat: unset;
+    mask-border-slice: unset;
+    mask-border-source: unset;
+    mask-border-width: unset;
+    mask-clip: unset;
+    mask-composite: unset;
+    mask-image: unset;
+    mask-mode: unset;
+    mask-origin: unset;
+    mask-position: unset;
+    mask-repeat: unset;
+    mask-size: unset;
+    mask-type: unset;
+    clip: unset;
+    clip-path: unset;
+    clip-rule: unset;
+
+    box-shadow: unset;
+    backdrop-filter: unset;
+    filter: unset;
+    mix-blend-mode: unset;
+    paint-order: unset;
+    opacity: unset;
+
+    print-color-adjust: unset;
+    image-orientation: unset;
+    image-rendering: unset;
+    image-resolution: unset;
+    object-fit: unset;
+    object-position: unset;
+
+    /*/// Shapes ///*/
+    shape-outside: unset;
+    shape-margin: unset;
+    shape-image-threshold: unset;
+
+    /*/// Transformations ///*/
+    transform: unset;
+    transform-box: unset;
+    transform-origin: unset;
+    transform-style: unset;
+    translate: unset;
+    backface-visibility: unset;
+    rotate: unset;
+    scale: unset;
+    perspective: unset;
+    perspective-origin: unset;
+
+    /*/// Transistions ///*/
+    transition: unset;
+    transition-delay: unset;
+    transition-duration: unset;
+    transition-property: unset;
+    transition-timing-function: unset;
+
+    /*/// Animations ///*/
+    animation: unset;
+    animation-delay: unset;
+    animation-direction: unset;
+    animation-duration: unset;
+    animation-fill-mode: unset;
+    animation-iteration-count: unset;
+    animation-name: unset;
+    animation-play-state: unset;
+    animation-timeline: unset;
+    animation-timing-function: unset;
+    offset: unset;
+    offset-anchor: unset;
+    offset-distance: unset;
+    offset-path: unset;
+    offset-position: unset;
+    offset-rotate: unset;
+}
+
+
+
+/*
+Box
+    - Block
+        - Display Type
+            - Outer
+                - block
+                    - box will break onto a new line
+                    - `width` & `height` are respected
+                    - margin, padding & border will cause other elements to be pushed away from the box
+                    - The box will extend in the inline direction to fill the space available in its container
+                      (In most cases, the box will become as wide as its container, filling up 100% of the space available)
+                - inline
+                    - box will not break onto a new line
+                    - `width` & `height` properties will not apply
+                    - Vertical padding, margins, and borders will apply but will not cause other inline boxes to move away from the box
+                    - Horizontal padding, margins, and borders will apply and will cause other inline boxes to move away from the box
+                - run-in
+            - Inner
+                - Normal Flow
+                    - block
+                    - inline
+                - flow
+                - flow-root
+                - table
+                - flex
+                - grid
+                - ruby
+            - Both
+                - list-item (Outer: list-item inline, Inner: block)
+                - inline-block (inline flow-root)
+                - inline-table
+                - inline-flex
+                - inline-grid
+    - Inline
+
+
+https://www.w3.org/TR/2007/WD-css3-box-20070809/
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block
+https://developer.mozilla.org/en-US/docs/Web/CSS/Visual_formatting_model
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+https://developer.mozilla.org/en-US/docs/Web/CSS/display
+https://developer.mozilla.org/en-US/docs/Web/CSS/display/two-value_syntax_of_display
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Display
+https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_mode
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout
+https://developer.mozilla.org/en-US/docs/Web/CSS/float
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fragmentation
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
+
+http://tavmjong.free.fr/blog/?p=1632
+
+
+https://css-tricks.com/poll-results-how-do-you-order-your-css-properties/
+https://9elements.com/css-rule-order/
+https://medium.com/swlh/better-ways-to-organise-css-properties-9a066e7ded62
+
+
+https://vecta.io/blog/definitive-guide-to-css-styling-order
+- Overriding (Definition Location)
+- Inheritance (Element structure)
+- Specificity (Selector)
++ !Important
+
+*/
